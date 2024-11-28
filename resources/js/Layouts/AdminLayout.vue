@@ -10,13 +10,13 @@
           <nav>
             <ul>
               <li><a href="/admin/ventas" class="block px-4 py-2 hover:bg-gray-700">Ventas</a></li>
-              <li><a href="/admin/usuarios" class="block px-4 py-2 hover:bg-gray-700">Usuarios</a></li>
-              <li><a href="/admin/categorias" class="block px-4 py-2 hover:bg-gray-700">Categoria</a></li>
-              <li><a href="/admin/pagos" class="block px-4 py-2 hover:bg-gray-700">Pagos</a></li>
-              <li><a href="/admin/productos" class="block px-4 py-2 hover:bg-gray-700">Productos</a></li>
-              <li><a href="/admin/promocion" class="block px-4 py-2 hover:bg-gray-700">Promociones</a></li>
-              <li><a href="/admin/inventarios" class="block px-4 py-2 hover:bg-gray-700">Inventario</a></li>
-              <li><a href="/admin/compras" class="block px-4 py-2 hover:bg-gray-700">Compras</a></li>
+              <li><a href="../admin/usuarios" class="block px-4 py-2 hover:bg-gray-700">Usuarios</a></li>
+              <li><a href="../admin/categorias" class="block px-4 py-2 hover:bg-gray-700">Categoria</a></li>
+              <li><a href="../admin/pagos" class="block px-4 py-2 hover:bg-gray-700">Pagos</a></li>
+              <li><a href="../admin/productos" class="block px-4 py-2 hover:bg-gray-700">Productos</a></li>
+              <li><a href="../admin/promocion" class="block px-4 py-2 hover:bg-gray-700">Promociones</a></li>
+              <li><a href="../admin/inventarios" class="block px-4 py-2 hover:bg-gray-700">Inventario</a></li>
+              <li><a href="../admin/compras" class="block px-4 py-2 hover:bg-gray-700">Compras</a></li>
             </ul>
           </nav>
         </aside>
