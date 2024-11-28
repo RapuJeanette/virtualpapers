@@ -187,7 +187,7 @@ const closeModal = () => {
 const createProducto = () => {
     errors.value = {};
     console.log(form.value);
-    Inertia.post('/admin/productos', form.value, {
+    Inertia.post('http://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/productos', form.value, {
         onSuccess: () => closeModal(),
         onError: (error) => { errors.value = error }
     });
