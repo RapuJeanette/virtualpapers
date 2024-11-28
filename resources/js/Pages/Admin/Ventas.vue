@@ -30,8 +30,7 @@
                                     class="px-4 py-2 text-white bg-yellow-500 rounded">
                                     Editar
                                 </button>
-                                <button @click="deleteVenta(venta.id)"
-                                    class="px-4 py-2 text-white bg-red-500 rounded">
+                                <button @click="deleteVenta(venta.id)" class="px-4 py-2 text-white bg-red-500 rounded">
                                     Eliminar
                                 </button>
                                 <button @click="goToDetalleVenta(venta.id)"
@@ -53,7 +52,8 @@
                                 <label for="fecha_venta" class="block">Fecha de Venta</label>
                                 <input v-model="form.fecha_venta" type="date" id="fecha_venta"
                                     class="w-full p-2 border border-gray-300 rounded" />
-                                <span v-if="errors.fecha_venta" class="text-sm text-red-500">{{ errors.fecha_venta }}</span>
+                                <span v-if="errors.fecha_venta" class="text-sm text-red-500">{{ errors.fecha_venta
+                                    }}</span>
                             </div>
                             <div class="mb-4">
                                 <label for="total" class="block">Total</label>
@@ -63,7 +63,8 @@
                             </div>
                             <div class="mb-4">
                                 <label for="estado" class="block">Estado</label>
-                                <select v-model="form.estado" id="estado" class="w-full p-2 border border-gray-300 rounded">
+                                <select v-model="form.estado" id="estado"
+                                    class="w-full p-2 border border-gray-300 rounded">
                                     <option value="pendiente">Pendiente</option>
                                     <option value="completada">Completada</option>
                                     <option value="cancelada">Cancelada</option>
@@ -72,10 +73,13 @@
                             </div>
                             <div class="mb-4">
                                 <label for="usuario_id" class="block">Usuario</label>
-                                <select v-model="form.usuario_id" id="usuario_id" class="w-full p-2 border border-gray-300 rounded">
-                                    <option v-for="usuario in usuarios" :key="usuario.id" :value="usuario.id">{{ usuario.nombre }}</option>
+                                <select v-model="form.usuario_id" id="usuario_id"
+                                    class="w-full p-2 border border-gray-300 rounded">
+                                    <option v-for="usuario in usuarios" :key="usuario.id" :value="usuario.id">{{
+                                        usuario.nombre }}</option>
                                 </select>
-                                <span v-if="errors.usuario_id" class="text-sm text-red-500">{{ errors.usuario_id }}</span>
+                                <span v-if="errors.usuario_id" class="text-sm text-red-500">{{ errors.usuario_id
+                                    }}</span>
                             </div>
                             <div class="flex justify-end">
                                 <button type="button" @click="closeModal"
@@ -134,7 +138,7 @@ const closeModal = () => {
 
 const createVenta = () => {
     errors.value = {};  // Limpiar los errores
-    Inertia.post('/admin/ventas', form.value, {
+    Inertia.post('/inf513/grupo07sa/proyecto2/public/admin/ventas', form.value, {
         onSuccess: () => {
             closeModal();  // Cerrar el modal al crear
         },
@@ -146,7 +150,7 @@ const createVenta = () => {
 
 const updateVenta = () => {
     errors.value = {};  // Limpiar los errores
-    Inertia.put(`/admin/ventas/${form.value.id}`, form.value, {
+    Inertia.put(`inf513/grupo07sa/proyecto2/public/admin/ventas/${form.value.id}`, form.value, {
         onSuccess: () => {
             closeModal();  // Cerrar el modal al actualizar
         },
@@ -170,4 +174,3 @@ const goToDetalleVenta = (id) => {
 <style scoped>
 /* Puedes agregar tus estilos personalizados aquí */
 </style>
-
