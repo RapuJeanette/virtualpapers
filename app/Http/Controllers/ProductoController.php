@@ -46,7 +46,7 @@ class ProductoController extends Controller
         ]);
 
 
-        return Inertia::render('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/Admin/Productos', [
+        return Inertia::render('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/productos', [
             'productos' => Producto::all(),
             'categorias' => Categoria::all(),
             'usuarios' => User::all()
