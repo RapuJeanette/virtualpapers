@@ -40,7 +40,7 @@ function handleImageError() {
                 Dashboard
               </Link>
               <template v-else>
-                <Link :href="route('login')" class="px-3 py-2 text-white hover:text-black/70 dark:text-white dark:hover:text-white/80 border border-transparent hover:border-[#FF2D20] rounded-md">
+                <Link :href="route('login')" class="px-3 py-2 text-white hover:text-black/70 bg-white dark:text-white dark:hover:text-white/80 border border-transparent hover:border-[#FF2D20] rounded-md">
                   Log in
                 </Link>
                 <Link v-if="canRegister" :href="route('register')" class="px-3 py-2 text-black bg-yellow-400 rounded-md hover:bg-yellow-500 dark:text-white dark:bg-yellow-500 dark:hover:bg-yellow-600">
