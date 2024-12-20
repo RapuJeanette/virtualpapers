@@ -12,12 +12,13 @@ export default defineConfig({
         vue({
             template: {
                 transformAssetUrls: {
-                    base: null,
+                    base: '/inf513/grupo07sa/proyecto2/public/',
                     includeAbsolute: false,
                 },
             },
         }),
     ],
+
     resolve: {
         alias: {
           '@': resolve(__dirname, 'resources/js'),
