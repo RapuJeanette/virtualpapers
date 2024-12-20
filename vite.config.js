@@ -18,7 +18,7 @@ export default defineConfig({
             },
         }),
     ],
-    baseUrl: '/inf513/grupo07sa/proyecto2/public/',
+    base: '/inf513/grupo07sa/proyecto2/public/',
     resolve: {
         alias: {
           '@': resolve(__dirname, 'resources/js'),
