@@ -142,7 +142,7 @@ const handlePageChange = (page) => {
 }
 
 const loadProducts = (page) => {
-  fetch(`/api/productos?page=${page}`)
+  fetch(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/api/productos?page=${page}`)
     .then((response) => response.json())
     .then((data) => {
       products.value = data;  // Actualiza los productos paginados
