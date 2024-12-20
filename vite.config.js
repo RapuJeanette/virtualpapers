@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 
 export default defineConfig({
-    base: 'https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/',
+    base: 'http://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/',
     plugins: [
         laravel({
             input: 'resources/js/app.js',
