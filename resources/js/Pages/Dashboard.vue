@@ -17,10 +17,10 @@ onMounted(async () => {
 
 const crearVentaYRedirigir = async () => {
     try {
-        const userResponse = await axios.get('/user'); // Obtener usuario logueado
+        const userResponse = await axios.get('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/user'); // Obtener usuario logueado
         const usuarioId = userResponse.data.id;
 
-        const response = await axios.post('/ventas/cliente', {
+        const response = await axios.post('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/ventas/cliente', {
             usuario_id: usuarioId,
             total: 0,
             estado: 'Pendiente',
