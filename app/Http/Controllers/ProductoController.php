@@ -46,7 +46,7 @@ class ProductoController extends Controller
         ]);
 
 
-        return Inertia::render('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/productos', [
+        return Inertia::render('http://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/productos', [
             'productos' => Producto::all(),
             'categorias' => Categoria::all(),
             'usuarios' => User::all()
@@ -56,7 +56,7 @@ class ProductoController extends Controller
     // Mostrar el formulario para editar un producto
     public function edit(Producto $producto)
     {
-        return Inertia::render('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/Admin/Productos', [
+        return Inertia::render('http://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/Admin/Productos', [
             'producto' => $producto,
             'categorias' => Categoria::all(),
         ]);
@@ -77,7 +77,7 @@ class ProductoController extends Controller
 
         $producto->update($validated);
 
-        return Inertia::render('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/productos', [
+        return Inertia::render('http://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/productos', [
             'categorias' => Categoria::all(),
         ]);
     }
