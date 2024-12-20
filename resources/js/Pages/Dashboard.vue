@@ -27,7 +27,7 @@ const crearVentaYRedirigir = async () => {
         });
         const ventaId = response.data.id;
 
-        Inertia.get(`/ventas/cliente/${ventaId}/detalle`);
+        Inertia.get(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/ventas/cliente/${ventaId}/detalle`);
     } catch (error) {
         console.error('Error creating sale:', error);
     }
