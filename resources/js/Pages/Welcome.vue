@@ -32,7 +32,7 @@ function handleImageError() {
         <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
           <header class="flex items-center justify-between px-6 py-10 text-white bg-gray-800">
             <div class="flex items-center space-x-3">
-              <img src="/images/virtuallogo.jpeg" alt="Logo" class="h-10"/>
+              <img src="https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/images/virtuallogo.jpeg" alt="Logo" class="h-10"/>
               <span class="text-xl font-bold">Virtual Papers</span>
             </div>
             <nav v-if="canLogin" class="flex items-center space-x-4">
@@ -40,7 +40,7 @@ function handleImageError() {
                 Dashboard
               </Link>
               <template v-else>
-                <Link :href="route('login')" class="px-3 py-2 text-white hover:text-black/70 bg-white dark:text-white dark:hover:text-white/80 border border-transparent hover:border-[#FF2D20] rounded-md">
+                <Link :href="route('login')" class="px-3 py-2 text-black hover:text-black/70 bg-white dark:text-white dark:hover:text-white/80 border border-transparent hover:border-[#FF2D20] rounded-md">
                   Log in
                 </Link>
                 <Link v-if="canRegister" :href="route('register')" class="px-3 py-2 text-black bg-yellow-400 rounded-md hover:bg-yellow-500 dark:text-white dark:bg-yellow-500 dark:hover:bg-yellow-600">
