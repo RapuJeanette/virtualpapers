@@ -8,7 +8,7 @@ const products = ref([]);
 
 onMounted(async () => {
     try {
-        const response = await axios.get('/products');
+        const response = await axios.get('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/products');
         products.value = response.data;
     } catch (error) {
         console.error('Error fetching products:', error);

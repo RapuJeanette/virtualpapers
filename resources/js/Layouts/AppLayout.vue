@@ -54,7 +54,7 @@ const logout = () => {
                             <!-- Logo -->
                             <div class="flex items-center shrink-0">
                                 <Link :href="route('dashboard')">
-                                <img src="/images/virtuallogo.jpeg" alt="Logo" class="h-10" />
+                                    <img src="https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/images/virtuallogo.jpeg" alt="Logo" class="h-10"/>
                                 </Link>
                             </div>
 
