@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 
 export default defineConfig({
+    base: '/inf513/grupo07sa/proyecto2/public/',
     plugins: [
         laravel({
             input: 'resources/js/app.js',
@@ -12,13 +13,12 @@ export default defineConfig({
         vue({
             template: {
                 transformAssetUrls: {
-                    base: '/inf513/grupo07sa/proyecto2/public/',
+                    base: null,
                     includeAbsolute: false,
                 },
             },
         }),
     ],
-
     resolve: {
         alias: {
           '@': resolve(__dirname, 'resources/js'),
