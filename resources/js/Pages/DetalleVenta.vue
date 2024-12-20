@@ -17,7 +17,7 @@
                     <p><strong>{{ producto.nombre }}</strong></p>
                     <p>Precio Unitario: ${{ producto.precio_unitario }}</p>
                     <p>Cantidad: {{ producto.cantidad }}</p> <!-- Mostrar la cantidad desde detalle_venta -->
-                    <p>Subtotal: ${{ producto.subtotal }}</p> <!-- Mostrar el subtotal -->
+                    <p>Subtotal: ${{ producto.precio_unitario * producto.cantidad }}</p> <!-- Mostrar el subtotal -->
                 </li>
             </ul>
             <p v-else class="text-gray-500">No hay productos en esta venta.</p>
