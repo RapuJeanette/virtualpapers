@@ -52,12 +52,10 @@ class VentaController extends Controller
 
     public function destroy($id)
     {
-        Venta::destroy($id);
+        $venta = Venta::findOrFail($id);
+        $venta->delete();
 
-        return Inertia::render('Admin/Ventas', [
-            'ventas' => Venta::all(),
-            'usuarios' => User::all(),
-        ]);
+        return redirect()->route('admin.ventas')->with('success', 'Venta eliminada correctamente.');
     }
 
     public function index()
