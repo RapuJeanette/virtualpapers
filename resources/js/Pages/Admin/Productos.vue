@@ -40,7 +40,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <Paginator :paginator="products" @page-changed="handlePageChange" class="mt-3"/>
+                <Paginator :paginator="products" @page-changed="handlePageChange" class="mt-3" />
 
                 <!-- Modal para crear o editar un producto -->
                 <div v-if="showModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
@@ -132,25 +132,25 @@ const props = defineProps({
     products: Array,
 });
 const products = ref({
-  data: [], // Productos iniciales
-  current_page: 1,
-  total_pages: 1,
+    data: [], // Productos iniciales
+    current_page: 1,
+    total_pages: 1,
 });
 
 const handlePageChange = (page) => {
-  loadProducts(page);
+    loadProducts(page);
 }
 
 const loadProducts = (page) => {
-  fetch(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/api/productos?page=${page}`)
-    .then((response) => response.json())
-    .then((data) => {
-      products.value = data;  // Actualiza los productos paginados
-    });
+    fetch(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/api/productos?page=${page}`)
+        .then((response) => response.json())
+        .then((data) => {
+            products.value = data;  // Actualiza los productos paginados
+        });
 }
 
 onMounted(() => {
-  loadProducts(products.value.current_page);
+    loadProducts(products.value.current_page);
 })
 
 const showModal = ref(false);

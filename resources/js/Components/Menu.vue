@@ -14,7 +14,7 @@
               <a href="admin/productos" :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block px-4 py-2 text-sm']">Panel Administrativo</a>
             </MenuItem>
             <MenuItem v-slot="{ active }">
-              <a href="../estadisticas" :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block px-4 py-2 text-sm']">Estadisticas</a>
+              <a href="/estadisticas" :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block px-4 py-2 text-sm']">Estadisticas</a>
             </MenuItem>
           </div>
         </MenuItems>
