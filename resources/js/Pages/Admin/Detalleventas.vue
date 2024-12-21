@@ -109,7 +109,7 @@ const agregarDetalleVenta = async () => {
     }
 
     try {
-        const response = await Inertia.post(`/admin/detalleventas/${props.venta.id}`, {
+        const response = await Inertia.post(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/detalleventas/${props.venta.id}`, {
             producto_id: nuevoDetalle.value.producto_id,
             cantidad: nuevoDetalle.value.cantidad,
             precio_unitario: nuevoDetalle.value.precio_unitario,
@@ -135,7 +135,7 @@ const totalVenta = computed(() => {
 
 const guardarTotal = async () => {
     try {
-        await Inertia.put(`/admin/ventas/${props.venta.id}`, {
+        await Inertia.put(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/ventas/${props.venta.id}`, {
             total: totalVenta.value, // Enviar el total calculado al backend
         });
 
@@ -147,7 +147,7 @@ const guardarTotal = async () => {
 };
 
 const volver = () => {
-    Inertia.get('/admin/ventas');
+    Inertia.get('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/ventas');
 };
 
 

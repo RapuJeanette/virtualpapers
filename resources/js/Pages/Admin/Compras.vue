@@ -121,7 +121,7 @@ const closeModal = () => {
 
 const createCompra = () => {
     errors.value = {};
-    Inertia.post('/admin/compras', form.value, {
+    Inertia.post('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/compras', form.value, {
         onSuccess: () => {
             closeModal();
         },
@@ -133,7 +133,7 @@ const createCompra = () => {
 
 const updateCompra = () => {
     errors.value = {};
-    Inertia.put(`/admin/compras/${form.value.id}`, form.value, {
+    Inertia.put(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/compras/${form.value.id}`, form.value, {
         onSuccess: () => {
             closeModal();
         },
@@ -145,12 +145,12 @@ const updateCompra = () => {
 
 const deleteCompra = (id) => {
     if (confirm('¿Estás seguro de que deseas eliminar esta compra?')) {
-        Inertia.delete(`/admin/compras/${id}`);
+        Inertia.delete(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/compras/${id}`);
     }
 };
 
 const goToDetalleCompra = (id) => {
-    Inertia.get(`/admin/detallecompras/${id}`);
+    Inertia.get(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/detallecompras/${id}`);
 };
 </script>
 

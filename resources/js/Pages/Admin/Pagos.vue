@@ -131,7 +131,7 @@ const closeModal = () => {
 
 const createPago = () => {
     errors.value = {};  // Limpiar los errores
-    Inertia.post('/admin/pagos', form.value, {
+    Inertia.post('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/pagos', form.value, {
         onSuccess: () => {
             closeModal();  // Cerrar el modal al crear
         },
@@ -143,7 +143,7 @@ const createPago = () => {
 
 const updatePago = () => {
     errors.value = {};  // Limpiar los errores
-    Inertia.put(`/admin/pagos/${form.value.id}`, form.value, {
+    Inertia.put(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/pagos/${form.value.id}`, form.value, {
         onSuccess: () => {
             closeModal();  // Cerrar el modal al actualizar
         },
@@ -155,7 +155,7 @@ const updatePago = () => {
 
 const deletePago = (id) => {
     if (confirm('¿Estás seguro de que deseas eliminar este pago?')) {
-        Inertia.delete(`/admin/pagos/${id}`);
+        Inertia.delete(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/pagos/${id}`);
     }
 };
 </script>

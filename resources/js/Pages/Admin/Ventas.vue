@@ -138,7 +138,7 @@ const closeModal = () => {
 
 const createVenta = () => {
     errors.value = {};  // Limpiar los errores
-    Inertia.post('/inf513/grupo07sa/proyecto2/public/admin/ventas', form.value, {
+    Inertia.post('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/ventas', form.value, {
         onSuccess: () => {
             closeModal();  // Cerrar el modal al crear
         },
@@ -150,7 +150,7 @@ const createVenta = () => {
 
 const updateVenta = () => {
     errors.value = {};  // Limpiar los errores
-    Inertia.put(`inf513/grupo07sa/proyecto2/public/admin/ventas/${form.value.id}`, form.value, {
+    Inertia.put(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/ventas/${form.value.id}`, form.value, {
         onSuccess: () => {
             closeModal();  // Cerrar el modal al actualizar
         },
@@ -162,12 +162,12 @@ const updateVenta = () => {
 
 const deleteVenta = (id) => {
     if (confirm('¿Estás seguro de que deseas eliminar esta venta?')) {
-        Inertia.delete(`/admin/ventas/${id}`);
+        Inertia.delete(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/ventas/${id}`);
     }
 };
 
 const goToDetalleVenta = (id) => {
-    Inertia.get(`/admin/detalleventas/${id}`);
+    Inertia.get(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/detalleventas/${id}`);
 };
 </script>
 

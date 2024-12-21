@@ -25,7 +25,7 @@ const registrarMovimiento = () => {
         return;
     }
 
-    Inertia.post('/admin/inventarios', form.value, {
+    Inertia.post('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/inventarios', form.value, {
         onSuccess: () => {
             form.value.producto_id = "";
             form.value.tipo_movimiento = "compra";
