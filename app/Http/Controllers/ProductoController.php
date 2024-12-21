@@ -14,6 +14,7 @@ class ProductoController extends Controller
 {
     public function index()
     {
+
         $productos = Producto::with('categoria', 'proveedor')->get();
         $products = Producto::all();
         $categorias = Categoria::all();
@@ -21,7 +22,13 @@ class ProductoController extends Controller
         return Inertia::render('Admin/Productos', compact('productos', 'categorias', 'usuarios', 'products'));
     }
 
-    // Almacenar un nuevo producto
+    public function apiIndex()
+    {
+        // Devuelve los productos en formato JSON
+        $productos = Producto::with('categoria', 'proveedor')->paginate(10); // Paginación
+        return response()->json($productos);
+    }
+
     public function store(Request $request)
     {
         $request->validate([

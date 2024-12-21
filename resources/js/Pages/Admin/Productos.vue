@@ -146,7 +146,8 @@ const loadProducts = (page) => {
         .then((response) => response.json())
         .then((data) => {
             products.value = data;  // Actualiza los productos paginados
-        });
+        })
+        .catch((error) => console.error('Error fetching products:', error));
 }
 
 onMounted(() => {
