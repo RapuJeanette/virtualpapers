@@ -98,7 +98,7 @@ const closeModal = () => {
 
 const createCategoria = () => {
     errors.value = {};  // Limpiar los errores
-    Inertia.post('/admin/categorias', form.value, {
+    Inertia.post('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/categorias', form.value, {
         onSuccess: () => {
             closeModal();  // Cerrar el modal al crear
         },
@@ -110,7 +110,7 @@ const createCategoria = () => {
 
 const updateCategoria = () => {
     errors.value = {};  // Limpiar los errores
-    Inertia.put(`/admin/categorias/${form.value.id}`, form.value, {
+    Inertia.put(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/categorias/${form.value.id}`, form.value, {
         onSuccess: () => {
             closeModal();  // Cerrar el modal al actualizar
         },
@@ -122,7 +122,7 @@ const updateCategoria = () => {
 
 const deleteCategoria = (id) => {
     if (confirm('¿Estás seguro de que deseas eliminar esta categoría?')) {
-        Inertia.delete(`/admin/categorias/${id}`);
+        Inertia.delete(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/categorias/${id}`);
     }
 };
 
