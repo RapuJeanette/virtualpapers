@@ -23,10 +23,7 @@ class VentaController extends Controller
 
         $venta = Venta::create($validated);
 
-        return Inertia::render('Admin/Ventas', [
-            'ventas' => Venta::all(),
-            'usuarios' => User::all(),
-        ]);
+        return redirect()->route('admin.ventas')->with('success', 'Venta creada correctamente.');
     }
 
     public function update(Request $request, $id)
@@ -44,10 +41,7 @@ class VentaController extends Controller
             'estado' => $request->input('estado', $venta->estado), // Si también cambias el estado
         ]);
 
-        return Inertia::render('Admin/Ventas', [
-            'ventas' => Venta::all(),
-            'usuarios' => User::all(),
-        ]);
+        return redirect()->route('admin.ventas')->with('success', 'Venta actualizada correctamente.');
     }
 
     public function destroy($id)

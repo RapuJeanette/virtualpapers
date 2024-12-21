@@ -150,7 +150,7 @@ const closeModal = () => {
 
 const createPromocion = () => {
     errors.value = {};
-    Inertia.post('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/promocion', form.value, {
+    Inertia.post('https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/promociones', form.value, {
         onSuccess: () => {
             closeModal();
         },
@@ -162,7 +162,7 @@ const createPromocion = () => {
 
 const updatePromocion = () => {
     errors.value = {};
-    Inertia.put(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/promocion/${form.value.id}`, form.value, {
+    Inertia.put(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/promociones/${form.value.id}`, form.value, {
         onSuccess: () => {
             closeModal();
         },
@@ -174,7 +174,7 @@ const updatePromocion = () => {
 
 const deletePromocion = (id) => {
     if (confirm('¿Estás seguro de que deseas eliminar esta promoción?')) {
-        Inertia.delete(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/promocion/${id}`);
+        Inertia.delete(`https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/admin/promociones/${id}`);
     }
 };
 </script>
