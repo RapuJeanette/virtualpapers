@@ -100,7 +100,7 @@ export default {
     methods: {
         async enviarDatos() {
             try {
-                const { data } = await axios.post("/recolectar-datos", this.form);
+                const { data } = await axios.post("https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/recolectar-datos", this.form);
                 this.response = data;
 
                 if (data.values) {
