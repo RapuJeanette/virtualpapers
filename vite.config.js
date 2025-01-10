@@ -18,7 +18,10 @@ export default defineConfig({
             },
         }),
     ],
-    base: 'https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/build',
+    base : [
+        'https://mail.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/build',
+        'www.tecnoweb.org.bo/inf513/grupo07sa/proyecto2/public/build'
+    ],
     resolve: {
         alias: {
           '@': resolve(__dirname, 'resources/js'),
